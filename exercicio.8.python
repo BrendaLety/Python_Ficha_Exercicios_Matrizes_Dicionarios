@@ -1,0 +1,39 @@
+#8. Um dicionário guarda as configurações de um jogo:
+
+#config = {"dificuldade": "normal", "som": "ativado", "legendas": "desativado"}
+
+#Permita ao usuário escolher uma chave e um novo valor para alterar, repetindo essa pergunta até ele digitar "sair" .
+
+configuracoes = {
+    "dificuldade": "normal", 
+    "som": "ativado", 
+    "legendas": "desativado"
+    }
+
+while True:
+    escolha: str = str(input("Se quiser interromper o programa, digite (sair). "))
+    
+    if escolha == "sair":
+        break
+    
+    else:
+        usuário = str(input("Modifique a chave de sua escolha com um novo valor, elas são: dificuldade, som, legendas. "))
+             
+        for configuracao in configuracoes: 
+
+            if usuário == "dificuldade":
+                novo_valor_1 = str(input("Insira o novo valor (fácil ou difícil) da chave 1:"))
+                configuracoes["dificuldade"] = novo_valor_1
+                break
+
+            elif usuário == "som" :
+                novo_valor_2 = str(input("Insira o novo valor (desativado) da chave 2:"))
+                configuracoes["som"] = novo_valor_2
+                break
+
+            elif usuário == "legendas":
+                novo_valor_3 = str(input("Insira o novo valor (ativada) da chave 3:"))
+                configuracoes["legendas"] = novo_valor_3
+                break
+
+print("A lista foi modificada. Essa é a lista modificada: ", configuracoes)
